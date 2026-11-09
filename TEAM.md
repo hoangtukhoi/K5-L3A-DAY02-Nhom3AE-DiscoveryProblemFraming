@@ -70,7 +70,7 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 **Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
 
 - `group_report.md` mục 2.1, mục 4, mục 5
-- Commit: https://github.com/hoangtukhoi/K5-L3A-DAY02-Nhom3AE-DiscoveryProblemFraming/commit/c12c94f247d1e0dea0486412d7129f46dae1d914 , https://github.com/hoangtukhoi/K5-L3A-DAY02-Nhom3AE-DiscoveryProblemFraming/commit/b0d7b9d74a703616f2fc690bd0b74d68995d8606
+- Commit: https://github.com/hoangtukhoi/K5-L3A-DAY02-Nhom3AE-DiscoveryProblemFraming/commit/c12c94f247d1e0dea0486412d7129f46dae1d914 , https://github.com/hoangtukhoi/K5-L3A-DAY02-Nhom3AE-DiscoveryProblemFraming/commit/c89011602300c0f7310ef0b0557e4035d334da55
 
 **Điều mình học được từ phần nhóm:**
 
