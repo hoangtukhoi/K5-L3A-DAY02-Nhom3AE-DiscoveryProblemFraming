@@ -12,7 +12,7 @@
 
 | STT | Họ và tên | MSSV | Vai trò trong nhóm | Tài khoản GitHub |
 |---:|---|---|---|---|
-| 1 | Nguyễn Minh Quân | | Phụ trách CP3 — Hội tụ nhóm | |
+| 1 | Nguyễn Minh Quân | 2A202603510 | Phụ trách CP3 — Hội tụ nhóm | minhquan2955 |
 | 2 | Nguyễn Đức Minh | 2A202603563 | Phụ trách CP4 — Kiểm chứng và research | ducminhnwork |
 | 3 | Phan Gia Bảo | | Phụ trách CP5 — Quy trình trước/sau | |
 | 4 | Vũ Lê Hoàng | 2A202603542 | Phụ trách CP6 — Mức can thiệp AI | hoangtukhoi |
@@ -82,3 +82,25 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 - Nút thắt của bài toán không nằm ở việc nhập liệu mà ở chất lượng thông tin đầu vào: cố vấn mất thời gian vì phải gọi hỏi lại khách nhiều đợt.
 - Candidate dễ là solution đội lốt opportunity: cả 3 candidate của mình đều bị gạch khỏi cây OST, và phản biện của Phan Gia Bảo cho thấy phần báo giá, bảo hành không cần đến AI.
 - Phải chứng minh được vì sao No AI hoặc Rule chưa đủ trước khi chọn AI, và đặt sẵn ngưỡng dừng để biết khi nào quay về phương án đơn giản hơn.
+
+### NguyenMinhQuan-2A202603510
+
+**Phần việc phụ trách:**
+
+- CP3 (người chính); hỗ trợ CP4, CP5, CP6
+
+**Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
+
+- Gom 12 candidate thành 3 cụm, vẽ cây OST
+- Chấm điểm shortlist, chọn candidate
+- Pitch 3 candidate, phản biện candidate của Minh
+
+**Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
+
+- `group_report.md` mục 2
+- Commit: https://github.com/hoangtukhoi/K5-L3A-DAY02-Nhom3AE-DiscoveryProblemFraming/commit/5a763f4d34da648fd66fcbe76c17e27777321f9c
+
+**Điều mình học được từ phần nhóm:**
+
+- Tách vấn đề khỏi giải pháp trá hình
+- Chấm theo tiêu chí giúp nhóm chọn nhanh, ít tranh cãi
