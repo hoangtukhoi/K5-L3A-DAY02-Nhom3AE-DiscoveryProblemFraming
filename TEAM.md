@@ -14,7 +14,7 @@
 |---:|---|---|---|---|
 | 1 | Nguyễn Minh Quân | 2A202603510 | Phụ trách CP3 — Hội tụ nhóm | minhquan2955 |
 | 2 | Nguyễn Đức Minh | 2A202603563 | Phụ trách CP4 — Kiểm chứng và research | ducminhnwork |
-| 3 | Phan Gia Bảo | | Phụ trách CP5 — Quy trình trước/sau | |
+| 3 | Phan Gia Bảo | 2A202603562 | Phụ trách CP5 — Quy trình trước/sau | giabao-vinuni-ai20k |
 | 4 | Vũ Lê Hoàng | 2A202603542 | Phụ trách CP6 — Mức can thiệp AI | hoangtukhoi |
 
 Không ghi email hay số điện thoại vào bảng này, vì repo có thể để public.
@@ -54,6 +54,28 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 **Điều mình học được từ phần nhóm:**
 
 -
+
+### PhanGiaBao-2A202603562
+
+**Phần việc phụ trách:**
+
+- CP5 (người chính); hỗ trợ CP3, CP4, CP6
+
+**Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
+
+- Quy trình hiện tại, quy trình tương lai, bảng before/after
+- Problem Statement v0
+- Pitch 3 candidate, phản biện candidate của Hoàng
+
+**Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
+
+- `group_report.md` mục 2.1, mục 4, mục 5
+- Commit: https://github.com/hoangtukhoi/K5-L3A-DAY02-Nhom3AE-DiscoveryProblemFraming/commit/c12c94f247d1e0dea0486412d7129f46dae1d914 , https://github.com/hoangtukhoi/K5-L3A-DAY02-Nhom3AE-DiscoveryProblemFraming/commit/b0d7b9d74a703616f2fc690bd0b74d68995d8606
+
+**Điều mình học được từ phần nhóm:**
+
+- Vẽ quy trình mới thấy đúng bước nghẽn
+- Metric phải đo cả chất lượng, không chỉ tốc độ
 
 ### VuLeHoang-2A202603542
 
