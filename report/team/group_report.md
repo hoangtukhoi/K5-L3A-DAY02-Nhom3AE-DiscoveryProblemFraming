@@ -52,7 +52,7 @@ OUTCOME:
 
 Những ý đã gạch bỏ vì là solution đội lốt opportunity:
 
--
+- 
 
 ### 2.4. Chấm điểm shortlist (1–5)
 
