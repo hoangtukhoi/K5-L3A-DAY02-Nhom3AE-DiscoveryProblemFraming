@@ -97,7 +97,7 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 
 - `report/team/group_report.md`: mục 6 (Mức can thiệp AI), mục 7 (Problem Statement v1 + tiêu chí đánh giá), mục 8 (Quyết định); phần đóng góp ở mục 2.1 và 3.
 - Báo cáo cá nhân: `report/individual/2A202603542_VuLeHoang.md`, mục 4.
-- Commit: `a0743aa` (team report), `57d619f` (báo cáo cá nhân).
+- Commit: "https://github.com/VinUni-AI20k/K5-L3-Day02-DiscoveryProblemFraming/commit/a0743aafa200bc37fb4ad35801686d2484aff0d" (team report), "https://github.com/VinUni-AI20k/K5-L3-Day02-DiscoveryProblemFraming/commit/a0794ab0ad555271fe42792b09b1199d548a0b7a" (báo cáo cá nhân).
 
 **Điều mình học được từ phần nhóm:**
 
