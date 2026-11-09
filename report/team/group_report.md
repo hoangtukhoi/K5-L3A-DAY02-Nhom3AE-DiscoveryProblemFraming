@@ -181,40 +181,34 @@ Phản biện nhận được (từ AI hoặc nhóm khác) và nhóm có đồng
 
 ## 6. Mức can thiệp AI (CP6)
 
-### 6.1. Ma trận độ mơ hồ × độ phức tạp
+*Người chính: Vũ Lê Hoàng · Hỗ trợ: Nguyễn Minh Quân, Nguyễn Đức Minh, Phan Gia Bảo*
 
-Bài của nhóm nằm ở ô:
+**Ma trận:** Độ mơ hồ cao (khách mô tả bằng lời tự do: tiếng kêu, mùi, cảm giác lái; mỗi lần một kiểu). Độ phức tạp thấp–trung bình (các bước cố định, không rẽ nhánh). → Workflow có AI ở một bước.
 
-Vì sao:
-
-### 6.2. So sánh 4 mức
-
-| Mức | Phương án cho bài của nhóm | Đủ khi nào | Rủi ro | Chọn? |
+| Mức | Phương án | Đủ khi nào | Rủi ro | Chọn? |
 |---|---|---|---|---|
-| **No AI** (sửa quy trình) | | | | |
-| **Rule** | | | | |
-| **Workflow** | | | | |
-| **Agent** | | | | |
+| No AI | Đào tạo cố vấn + danh sách câu hỏi in sẵn tại quầy | Cố vấn luôn hỏi đủ, khách tới trực tiếp | Không giảm số lần gọi lại trước khi xe tới | Dùng làm phương án quay về |
+| Rule | Ô bắt buộc trong form đặt lịch theo bộ câu hỏi ASE C1 | Lỗi rơi vào vài loại cố định | Không đọc được mô tả tự do; khách có thể bỏ dở form dài | Dùng cho bước 1 |
+| Workflow | Form bắt buộc → AI gợi ý câu hỏi còn thiếu + soạn nháp phiếu → cố vấn duyệt | Các bước cố định, AI chỉ làm phần đọc và viết | Gợi ý sai, tóm tắt sai lời khách | Chọn |
+| Agent | AI tự nhắn khách, tự hỏi tiếp, tự tạo lệnh sửa chữa | Khi bước tiếp theo không đoán trước được | Tự liên hệ khách, khó kiểm soát, nhiều quyền truy cập | Không chọn |
 
-**Mức chọn:**
+**Vì sao không chọn mức đơn giản hơn:** Rule (ô bắt buộc) chỉ bắt được các mục cố định; mô tả tự do kiểu "xe kêu như tiếng tất khô" (ví dụ trên diễn đàn DealersEdge) không vào được ô nào, và đây chính là phần cố vấn phải gọi lại hỏi. Tuy vậy bằng chứng còn yếu: nếu khảo sát cho thấy thông tin thiếu chỉ là vài mục cố định (giả định #2) thì Rule là đủ và nhóm sẽ dừng ở Rule.
 
-**Vì sao không chọn mức đơn giản hơn:**
-
-### 6.3. AI Canvas rút gọn
+**AI Canvas rút gọn:**
 
 | Thành phần | Nội dung |
 |---|---|
-| **Prediction** — AI dự đoán / tạo ra gì? | |
-| **Judgment** — con người cân nhắc, quyết định gì? | |
-| **Action** — hành động cuối cùng là gì, ai làm? | |
-| **Outcome** — đo kết quả bằng gì? | |
-| **Input** — AI cần dữ liệu đầu vào gì mỗi lần chạy? Có sẵn không? | |
-| **Feedback** — lấy phản hồi ở đâu để cải thiện? | |
+| Prediction | 2–3 câu hỏi còn thiếu cho mô tả của khách; nháp phiếu tiếp nhận theo mẫu (triệu chứng, khi nào, điều kiện, số km) |
+| Judgment | Cố vấn quyết định câu hỏi nào cần hỏi, mô tả nào đủ để giao kỹ thuật viên |
+| Action | Cố vấn gửi câu hỏi đã duyệt cho khách hoặc hỏi khi khách tới; tạo lệnh sửa chữa |
+| Outcome | Số lần gọi lại khách mỗi lịch; số lần kỹ thuật viên hỏi lại cố vấn; tỉ lệ câu hỏi gợi ý bị cố vấn bỏ |
+| Input | Nội dung khách điền khi đặt lịch (ô bắt buộc + mô tả tự do), đời xe, số km |
+| Feedback | Câu hỏi cố vấn sửa hoặc bỏ mỗi ngày; câu kỹ thuật viên hỏi lại |
 
-### 6.4. Hai câu hỏi của Google PAIR
+**Câu hỏi PAIR:**
 
-- Người dùng muốn **được hỗ trợ (augment)** hay **giao hẳn việc (automate)**? Bằng chứng:
-- AI sai kiểu nào tệ hơn, **báo nhầm** hay **bỏ sót**? Vì sao, và thiết kế đã xử lý thế nào:
+- Augment hay automate? Augment. Cố vấn vẫn là người hỏi khách và chịu trách nhiệm phiếu; không gửi gì cho khách nếu cố vấn chưa duyệt.
+- Sai kiểu nào tệ hơn? Bỏ sót tệ hơn báo nhầm: thiếu một câu hỏi quan trọng thì kỹ thuật viên sửa sai; thừa một câu hỏi chỉ tốn thêm của khách vài giây. Tiêu chí đánh giá ưu tiên "không bỏ sót thông tin cần thiết".
 
 ---
 
@@ -222,63 +216,53 @@ Vì sao:
 
 | Trường | Nội dung |
 |---|---|
-| **Actor** | |
-| **Quy trình** | |
-| **Bottleneck** | |
-| **Impact** | |
-| **Success Metric** (baseline → target, cách đo) | |
-| **Boundary** | |
-| **AI intervention point** | |
-| **Mức chọn** | No AI / Rule / Workflow / Agent |
-| **Rủi ro & người kiểm tra** | |
-
-**Thay đổi so với v0 và lý do:**
+| Actor | Cố vấn dịch vụ tiếp nhận lịch đặt bảo dưỡng, sửa chữa, ở xưởng có cho khách mô tả nhu cầu bằng lời tự do khi đặt lịch |
+| Quy trình | Đọc lịch đặt → gọi lại khách hỏi thêm → ghi phiếu tiếp nhận → xác nhận tại quầy → tạo lệnh sửa chữa → bàn giao kỹ thuật viên |
+| Bottleneck | Gọi lại khách hỏi thêm vì mô tả lúc đặt lịch thiếu, và cố vấn không có bộ câu hỏi bổ sung theo từng loại triệu chứng (~5–10 phút mỗi lịch, ước lượng) |
+| Impact | Mất thời gian cố vấn; kỹ thuật viên đoán từ thông tin thiếu, có thể sửa sai, khách quay lại (theo tư liệu công khai ở mục 3.2) |
+| Success Metric | (1) Số lần gọi lại khách mỗi lịch: [đo] → tối đa 1; (2) số lần kỹ thuật viên hỏi lại cố vấn: [đo] → giảm 50%; (3) cố vấn bỏ dưới 30% câu hỏi AI gợi ý; đo trong 2 tuần pilot |
+| Boundary | AI không chẩn đoán, không báo giá, không kết luận bảo hành, không tự liên hệ khách, không sửa thông tin khách đã điền |
+| AI intervention point | Sau khi khách gửi form đặt lịch, trước bước cố vấn gọi lại khách |
+| Mức chọn | Workflow (Rule ở bước form + AI ở bước gợi ý câu hỏi, soạn nháp phiếu) |
+| Rủi ro & người kiểm tra | Gợi ý sai, bỏ sót, tóm tắt sai lời khách → cố vấn đối chiếu nháp với lời khách trước khi dùng |
 
 | Trường | v0 | v1 | Vì sao đổi |
 |---|---|---|---|
-| | | | |
+| Actor | Cố vấn dịch vụ tiếp nhận lịch đặt | Thêm: ở xưởng cho khách mô tả tự do khi đặt lịch | Nếu xưởng chỉ dùng ô chọn cố định thì Rule là đủ, không cần AI |
+| Success Metric | Chỉ đo tốc độ | Thêm số lần kỹ thuật viên hỏi lại và tỉ lệ câu hỏi bị bỏ | Phản biện: nhanh hơn mà phiếu vẫn thiếu thì không đạt |
+| Boundary | Không tự nhắn khách, không chẩn đoán, không báo giá | Thêm: không kết luận bảo hành, không sửa thông tin khách điền | Tư liệu DealerELITE: ghi sai mô tả có thể làm mất bảo hành |
 
-**Tiêu chí đánh giá đầu ra của AI (3–5 tiêu chí):**
+**Tiêu chí đánh giá:**
 
 | # | Tiêu chí | Đạt khi | Không đạt khi |
-|---:|---|---|---|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
+|---|---|---|---|
+| 1 | Không bỏ sót | Hỏi đủ các mục còn thiếu: triệu chứng, khi nào xảy ra, liên tục hay thỉnh thoảng, điều kiện | Bỏ qua mục còn thiếu mà kỹ thuật viên cần |
+| 2 | Không hỏi lại điều khách đã nói | Mọi câu hỏi đều về thông tin chưa có | Hỏi lại điều khách đã ghi trong form |
+| 3 | Không bịa, không chẩn đoán | Nháp phiếu chỉ chứa thông tin khách đã đưa | Có nguyên nhân lỗi, giá hoặc kết luận bảo hành |
+| 4 | Ngắn, dễ trả lời | Tối đa 3 câu, mỗi câu khách trả lời được trong 1 dòng | Câu dài, dùng thuật ngữ kỹ thuật |
 
 ---
 
 ## 8. Quyết định (CP6)
 
-### 8.1. Bốn rủi ro
+| Rủi ro | Mức | Lý do |
+|---|---|---|
+| Value | Trung bình | Tư liệu công khai xác nhận pain, nhưng cả 3 nguồn ở Mỹ; chưa có số liệu Việt Nam hay VinFast (giả định #1, #2) |
+| Usability | Thấp | Cố vấn chỉ duyệt và sửa vài câu hỏi; có phương án quay về là danh sách câu hỏi cố định |
+| Feasibility | Trung bình | Đã có công cụ làm gần đúng việc này (myKaarma Service Pre-Diag), nhưng nhóm chưa biết lấy được nội dung đặt lịch từ hệ thống của xưởng không |
+| Viability | Cao | Dữ liệu khách hàng; chưa biết quy định nội bộ có cho đưa vào công cụ bên ngoài (giả định #4) |
 
-| Rủi ro | Câu hỏi | Mức độ rủi ro (Thấp = an toàn / TB / Cao = nguy hiểm) | Lý do / bằng chứng |
-|---|---|---|---|
-| **Value** | Người dùng có thật sự cần và sẽ dùng không? | | |
-| **Usability** | Người dùng có dùng được, có hiểu và sửa được đầu ra của AI không? | | |
-| **Feasibility** | Có đủ dữ liệu, công cụ, kỹ năng để làm không? | | |
-| **Viability** | Có hợp chi phí, pháp lý, quy định tổ chức không? Ai vận hành? | | |
+**Quyết định:** Not Yet. Viability ở mức Cao nhưng kiểm chứng nhanh được bằng cách hỏi người làm ở xưởng; Value cần số liệu Việt Nam trước khi làm.
 
-### 8.2. Kết luận
+**Ngưỡng dừng:** Nếu khảo sát 10 người từng đặt lịch cho thấy dưới 30% bị gọi lại hỏi thêm → No-Go. Nếu thông tin thiếu chỉ là vài mục cố định → dừng ở Rule (form bắt buộc). Nếu pilot 2 tuần mà cố vấn bỏ quá 50% câu hỏi AI gợi ý → quay về danh sách câu hỏi cố định.
 
-**Quyết định:** Go / Not Yet / No-Go
+**Bước tiếp theo:** (1) Khảo sát 10 người từng đặt lịch bảo dưỡng; (2) hỏi một cố vấn dịch vụ thật về số lần gọi lại và quy định dữ liệu; (3) thử form bắt buộc trước, chỉ thêm AI nếu form không đủ.
 
-**Lý do:**
+**Nguồn**
 
-**Nếu Go — pilot nhỏ nhất:**
-
-**Nếu Not Yet — cần kiểm chứng gì trước:**
-
-**Nếu No-Go — nên làm gì thay AI:**
-
-**Ngưỡng dừng** (nếu sau … mà … thì quay về …):
-
----
-
-## 9. Hạn chế và hướng tiếp theo
-
--
-
-## 10. Tài liệu tham khảo
-
--
+- [KTAR — Ever have your auto shop fix the wrong noise](https://ktar.com/uncategorized/ever-have-your-auto-shop-fix-the-wrong-noise)
+- [DealersEdge forum — Terminology](https://forums.dealersedge.com/viewtopic.php?p=48481)
+- [DealerELITE — The 3 C's: Customer concern](https://www.dealerelite.net/profiles/blogs/the-3c-s-customer-concern)
+- [myKaarma — Service Pre-Diag AI Overview](https://support.mykaarma.com/hc/en-us/articles/45647747400211-Service-Pre-Diag-AI-Overview-Smarter-Service-Conversations-Before-Check-In)
+- [Brake & Front End — ASE C1 Test Prep, Customer Interview and Write Up](https://www.brakeandfrontend.com/ase-c1-test-prep-customer-interview-and-write-up/)
+- [Motor Magazine — Make Your Initial Assessment Count (2012)](https://www.motor.com/wp-content/uploads/MakeYourInitialAssessmentCount-Feb-2012.pdf)
